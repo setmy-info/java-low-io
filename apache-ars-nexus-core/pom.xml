@@ -63,6 +63,10 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -182,8 +186,8 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
-        <developers>
+
+    <developers>
         <developer>
             <id>imreit</id>
             <email>imre.tabur@mail.ee</email>
