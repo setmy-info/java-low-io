@@ -6,13 +6,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.apache.ars.nexus</groupId>
-    <artifactId>apache-ars-nexus-parent</artifactId>
+    <groupId>org.apache.low.io</groupId>
+    <artifactId>apache-low-io-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>apache-ars-nexus-parent</name>
-    <description>Ars Nexus</description>
+    <name>apache-low-io-parent</name>
+    <description>Low IO / Ars Nexus</description>
     <url>https://github.com/setmy-info/apache-ars-nexus</url>
 
     <properties>
@@ -26,8 +26,8 @@
     </properties>
 
     <modules>
-        <module>apache-ars-nexus-bom</module>
-        <module>apache-ars-nexus-core</module>
+        <module>apache-low-io-bom</module>
+        <module>apache-low-io-core</module>
     </modules>
 
     <dependencies>
@@ -120,8 +120,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.apache.ars.nexus</groupId>
-                <artifactId>apache-ars-nexus-bom</artifactId>
+                <groupId>org.apache.low.io</groupId>
+                <artifactId>apache-low-io-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
