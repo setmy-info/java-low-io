@@ -379,15 +379,15 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:setmy-info/apache-ars-nexus.git</connection>
-        <developerConnection>scm:git:git@github.com:setmy-info/apache-ars-nexus.git</developerConnection>
-        <url>https://github.com/setmy-info/apache-ars-nexus</url>
+        <connection>scm:git:git@github.com:setmy-info/apache-low-io.git</connection>
+        <developerConnection>scm:git:git@github.com:setmy-info/apache-low-io.git</developerConnection>
+        <url>https://github.com/setmy-info/apache-low-io</url>
         <tag>1.0.0-SNAPSHOT</tag>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/setmy-info/apache-ars-nexus/issues</url>
+        <url>https://github.com/setmy-info/apache-low-io/issues</url>
     </issueManagement>
 
     <ciManagement/>
@@ -414,7 +414,7 @@
     <licenses>
         <license>
             <name>Apache License 2.0</name>
-            <url>https://raw.githubusercontent.com/setmy-info/apache-ars-nexus/refs/heads/main/LICENSE</url>
+            <url>https://raw.githubusercontent.com/setmy-info/apache-low-io/refs/heads/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>

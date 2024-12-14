@@ -12,7 +12,7 @@ public class Protocol {
     private final Map<String, Objects> variables = new HashMap<>();
     private final String startStepName;
 
-    public Protocol add(final Step step) {
+    public Protocol step(final Step step) {
         step.setProtocol(this);
         steps.add(step);
         return this;
