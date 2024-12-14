@@ -4,29 +4,34 @@ Network protocol build framework.
 
 ## Idea
 
-Library that helps to build in client-server protocol as graph for execution.
-Graph contains steps (read, write) as nodes and flow as graph edges.
+A library that helps build client-server protocols as an execution graph. The graph contains steps (read, write) as
+nodes and flow as graph edges.
 
-Like Camunda and BPMN - draw graph with UI, save it to BPMN (XML) file and write code behind steps. Camunda
-handles/manages workflow (steps) execution (workflow instance) by graph.
+Similar to Camunda and BPMN: draw the graph using a UI, save it as a BPMN (XML) file, and write the code for the steps.
+Camunda manages workflow execution (workflow instances) based on the graph.
 
-Ideally write and register protocol in configuration form (JSON, XML, ...). Library that loads that and helps to start
-serve and make client code that interacts by protocol by protocol with server. Integrator sends specific data and gets
-specific data, without thinking lower level protocols implementation.
+Ideally, protocols can be written and registered in a configuration format (JSON, XML, etc.). The library loads the
+configuration, starts the server, and provides client code that interacts with the server using the protocol.
+Integrators send specific data and receive specific data without worrying about low-level protocol implementation (even
+step code).
+
+Define protocol and start using it in higer level.
 
 ### MVP
 
-MVP as project example and demo.
+An MVP as a project example and demo.
 
-* Can be:
-    * unfinished
-    * not well performing
-    * not thread safe.
-* First release TCP/IP only, with client and server.
-* Binary data send-receive.
-* Event handlers.
-* Protocol builders.
-* Multi level:
-    * Lower - bytes send and received.
-    * Higher - byte sets combined and build as specific data types: BigInteger, DateTime, etc
-* ...
+* Features:
+    * Can be:
+        * unfinished
+        * not high-performing
+        * not thread-safe.
+    * Initial release: TCP/IP only, with client and server.
+    * Binary data transmission (send/receive).
+    * Event handlers.
+    * Protocol builders.
+    * Multi-level:
+        * Lower level - sending and receiving bytes.
+        * Higher level - combining byte sets into specific data types: BigInteger, DateTime, etc.
+    * Flow follow rules
+    * ...
