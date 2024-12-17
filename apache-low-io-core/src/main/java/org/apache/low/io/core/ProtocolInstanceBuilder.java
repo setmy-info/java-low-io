@@ -4,7 +4,7 @@ import org.apache.low.io.core.models.instances.ProtocolInstance;
 
 public interface ProtocolInstanceBuilder {
 
-    String name();
+    String getName();
 
     ProtocolInstance build();
 }

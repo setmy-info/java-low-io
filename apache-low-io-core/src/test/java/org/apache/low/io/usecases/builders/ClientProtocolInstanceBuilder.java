@@ -6,16 +6,16 @@ import org.apache.low.io.core.models.instances.ClientProtocolInstance;
 import org.apache.low.io.core.models.instances.ProtocolInstance;
 import org.apache.low.io.core.models.steps.*;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ClientProtocolInstanceBuilder implements ProtocolInstanceBuilder {
 
-
-public record ClientProtocolInstanceBuilder(String name) implements ProtocolInstanceBuilder {
+    public String getName() {
+        return "client";
+    }
 
     @Override
     public ProtocolInstance build() {
-        final List<Rule> writeRules = new ArrayList<>();
-        final List<Rule> readRules = new ArrayList<>();
+        final Rules writeRules = new Rules();
+        final Rules readRules = new Rules();
 
         final Protocol protocol = Protocol.builder()
             .startStepName("write")
@@ -23,18 +23,18 @@ public record ClientProtocolInstanceBuilder(String name) implements ProtocolInst
         protocol
             .step(WriteStep.builder()
                 .name("write")
-                .config(WriteStepConfig.builder()
+                .writeStepConfig(WriteStepConfig.builder()
                     .build()
                 )
-                .flowRules(writeRules)
+                .rules(writeRules)
                 .build()
             )
             .step(ReadStep.builder()
                 .name("read")
-                .config(ReadStepConfig.builder()
+                .readStepConfig(ReadStepConfig.builder()
                     .build()
                 )
-                .flowRules(readRules)
+                .rules(readRules)
                 .build()
             );
         final ClientProtocolInstance protocolInstance = ClientProtocolInstance.builder()

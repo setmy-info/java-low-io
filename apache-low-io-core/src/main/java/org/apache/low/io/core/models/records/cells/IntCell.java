@@ -1,8 +1,8 @@
 package org.apache.low.io.core.models.records.cells;
 
-public class IntCell extends Cell<Short> {
+public class IntCell extends Cell<Integer> {
 
-    protected IntCell(final Short value) {
+    protected IntCell(final Integer value) {
         super(value);
     }
 }

@@ -6,15 +6,16 @@ import org.apache.low.io.core.models.instances.ProtocolInstance;
 import org.apache.low.io.core.models.instances.ServerProtocolInstance;
 import org.apache.low.io.core.models.steps.*;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ServerProtocolInstanceBuilder implements ProtocolInstanceBuilder {
 
-public record ServerProtocolInstanceBuilder(String name) implements ProtocolInstanceBuilder {
+    public String getName() {
+        return "server";
+    }
 
     @Override
     public ProtocolInstance build() {
-        final List<Rule> writeRules = new ArrayList<>();
-        final List<Rule> readRules = new ArrayList<>();
+        final Rules writeRules = new Rules();
+        final Rules readRules = new Rules();
 
         final Protocol protocol = Protocol.builder()
             .startStepName("read")
@@ -22,18 +23,18 @@ public record ServerProtocolInstanceBuilder(String name) implements ProtocolInst
         protocol
             .step(ReadStep.builder()
                 .name("read")
-                .config(ReadStepConfig.builder()
+                .readStepConfig(ReadStepConfig.builder()
                     .build()
                 )
-                .flowRules(readRules)
+                .rules(readRules)
                 .build()
             )
             .step(WriteStep.builder()
                 .name("write")
-                .config(WriteStepConfig.builder()
+                .writeStepConfig(WriteStepConfig.builder()
                     .build()
                 )
-                .flowRules(writeRules)
+                .rules(writeRules)
                 .build()
             );
         final ServerProtocolInstance protocolInstance = ServerProtocolInstance.builder()

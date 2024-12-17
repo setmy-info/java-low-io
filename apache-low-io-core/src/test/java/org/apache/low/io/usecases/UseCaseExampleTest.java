@@ -1,9 +1,9 @@
 package org.apache.low.io.server;
 
-import org.apache.low.io.usecases.builders.ClientProtocolInstanceBuilder;
-import org.apache.low.io.usecases.builders.ServerProtocolInstanceBuilder;
 import org.apache.low.io.core.ProtocolFactory;
 import org.apache.low.io.core.models.instances.ProtocolInstance;
+import org.apache.low.io.usecases.builders.ClientProtocolInstanceBuilder;
+import org.apache.low.io.usecases.builders.ServerProtocolInstanceBuilder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +18,8 @@ class UseCaseExampleTest {
     @BeforeEach
     void setUp() {
         protocolFactory = ProtocolFactory.getInstance();
-        protocolFactory.register(new ServerProtocolInstanceBuilder("server"));
-        protocolFactory.register(new ClientProtocolInstanceBuilder("client"));
+        protocolFactory.register(new ServerProtocolInstanceBuilder());
+        protocolFactory.register(new ClientProtocolInstanceBuilder());
 
         server = new Server(
             ServerConfig.builder()
@@ -36,5 +36,8 @@ class UseCaseExampleTest {
         server.start();
 
         clientProtocolInstance = protocolFactory.newProtocolInstance("client");
+        clientProtocolInstance.ifPresent(protocolInstance -> {
+            protocolInstance.run();
+        });
     }
 }

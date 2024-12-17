@@ -22,7 +22,7 @@ public final class ProtocolFactory {
     }
 
     public void register(final ProtocolInstanceBuilder builder) {
-        protocolBuilders.put(builder.name(), builder);
+        protocolBuilders.put(builder.getName(), builder);
     }
 
     public Optional<ProtocolInstance> newProtocolInstance(final String protocolName) {
