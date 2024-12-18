@@ -7,13 +7,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.low.io</groupId>
-    <artifactId>apache-low-io-parent</artifactId>
+    <artifactId>java-low-io-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>apache-low-io-parent</name>
+    <name>java-low-io-parent</name>
     <description>Low IO</description>
-    <url>https://github.com/setmy-info/apache-low-io</url>
+    <url>https://github.com/setmy-info/java-low-io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,8 +26,8 @@
     </properties>
 
     <modules>
-        <module>apache-low-io-bom</module>
-        <module>apache-low-io-core</module>
+        <module>java-low-io-bom</module>
+        <module>java-low-io-core</module>
     </modules>
 
     <dependencies>
@@ -121,7 +121,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.apache.low.io</groupId>
-                <artifactId>apache-low-io-bom</artifactId>
+                <artifactId>java-low-io-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -185,15 +185,15 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:setmy-info/apache-low-io.git</connection>
-        <developerConnection>scm:git:git@github.com:setmy-info/apache-low-io.git</developerConnection>
-        <url>https://github.com/setmy-info/apache-low-io</url>
+        <connection>scm:git:git@github.com:setmy-info/java-low-io.git</connection>
+        <developerConnection>scm:git:git@github.com:setmy-info/java-low-io.git</developerConnection>
+        <url>https://github.com/setmy-info/java-low-io</url>
         <tag>1.0.0-SNAPSHOT</tag>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/setmy-info/apache-low-io/issues</url>
+        <url>https://github.com/setmy-info/java-low-io/issues</url>
     </issueManagement>
 
     <ciManagement/>
@@ -220,7 +220,7 @@
     <licenses>
         <license>
             <name>Apache License 2.0</name>
-            <url>https://raw.githubusercontent.com/setmy-info/apache-low-io/refs/heads/main/LICENSE</url>
+            <url>https://raw.githubusercontent.com/setmy-info/java-low-io/refs/heads/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
