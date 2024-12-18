@@ -21,21 +21,19 @@ public class ServerProtocolInstanceBuilder implements ProtocolInstanceBuilder {
             .startStepName("read")
             .build();
         protocol
-            .step(ReadStep.builder()
-                .name("read")
-                .readStepConfig(ReadStepConfig.builder()
-                    .build()
+            .step(new ReadStep(
+                    "read",
+                    readRules,
+                    null,
+                    ReadStepConfig.builder().build()
                 )
-                .rules(readRules)
-                .build()
             )
-            .step(WriteStep.builder()
-                .name("write")
-                .writeStepConfig(WriteStepConfig.builder()
-                    .build()
+            .step(new WriteStep(
+                    "write",
+                    writeRules,
+                    null,
+                    WriteStepConfig.builder().build()
                 )
-                .rules(writeRules)
-                .build()
             );
         final ServerProtocolInstance protocolInstance = ServerProtocolInstance.builder()
             .protocol(protocol)

@@ -16,8 +16,8 @@ public class Protocol {
     private final String startStepName;
 
     public Protocol step(final Step step) {
-        step.setProtocol(this);
-        steps.add(step);
+        Step newStep = step.withProtocol(this);
+        steps.add(newStep);
         return this;
     }
 

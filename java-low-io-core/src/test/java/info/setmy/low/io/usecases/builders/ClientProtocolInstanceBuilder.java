@@ -21,21 +21,19 @@ public class ClientProtocolInstanceBuilder implements ProtocolInstanceBuilder {
             .startStepName("write")
             .build();
         protocol
-            .step(WriteStep.builder()
-                .name("write")
-                .writeStepConfig(WriteStepConfig.builder()
-                    .build()
+            .step(new WriteStep(
+                    "write",
+                    writeRules,
+                    null,
+                    WriteStepConfig.builder().build()
                 )
-                .rules(writeRules)
-                .build()
             )
-            .step(ReadStep.builder()
-                .name("read")
-                .readStepConfig(ReadStepConfig.builder()
-                    .build()
+            .step(new ReadStep(
+                    "read",
+                    readRules,
+                    null,
+                    ReadStepConfig.builder().build()
                 )
-                .rules(readRules)
-                .build()
             );
         final ClientProtocolInstance protocolInstance = ClientProtocolInstance.builder()
             .protocol(protocol)
