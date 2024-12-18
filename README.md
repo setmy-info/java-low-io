@@ -4,34 +4,45 @@ Network protocol build framework.
 
 ## Idea
 
-A library that helps build client-server protocols as an execution graph. The graph contains steps (read, write) as
-nodes and flow as graph edges.
+A library that helps build client-server protocols as an execution graph. The graph (protocol) contains steps (read,
+write) as nodes and flow as graph edges.
 
-Similar to Camunda and BPMN: draw the graph using a UI, save it as a BPMN (XML) file, and write the code for the steps.
-Camunda manages workflow execution (workflow instances) based on the graph.
+Library API provides a way to define the protocol, read and write steps with configuration and variables to be used and
+read or written, driven by flow rules. And then run the protocol.
 
-The library enables defining the protocol and starting to use it at a higher level, abstracting away the
-lower-level mechanics and focusing on business logic and data flows.
+Prepared protocol definitions can be in separate library(ies).
 
-Ideally, protocols can be written and registered in a configuration format (JSON, XML, etc.). The library loads the
-configuration, starts the server, and provides client code that interacts with the server using the protocol.
-Integrators send specific data and receive specific data without worrying about low-level protocol implementation (even
-step code).
+## Glossary
+
+* Protocol - protocol definition
+* (Protocol) Instance - a running protocol
+* Steps
+    * Read
+    * Write
+    * ???
+* Handlers
+    * Pre-step handlers
+    * Post-step handlers
+* (Flow) Rules
+* Configuration
+    * Step configuration
+    * Protocol configuration
+* Variables
+    * Step variables
+    * Protocol variables
+* Data transformation
 
 ### MVP
 
-An MVP as a project example and demo.
+A demo MVP can be as:
 
-* Features:
-    * Can be:
-        * unfinished
-        * not high-performing
-        * not thread-safe.
-    * Initial release: TCP/IP only, with client and server.
-    * Binary data transmission (send/receive).
-    * Event handlers.
-    * Protocol builders.
-    * Multi-level:
-        * Lower level - sending and receiving bytes.
-        * Higher level - combining byte sets into specific data types: BigInteger, DateTime, etc.
-    * ...
+* Java
+* TCP only
+* Not fully implemented
+* Not high-performing
+* Not thread-safe (single thread demo)
+* Client and server
+* Binary send and receive
+* No compression
+* No encryption
+* No authentication
