@@ -23,6 +23,7 @@ Prepared protocol definitions can be in separate library(ies).
 * Handlers
     * Pre-step handlers
     * Post-step handlers
+        * Rules step handler (possible solution for flow rules)
 * (Flow) Rules
 * Configuration
     * Step configuration
