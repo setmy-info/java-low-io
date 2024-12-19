@@ -5,7 +5,7 @@ Network protocol build framework.
 ## Idea
 
 A library that helps build client-server protocols as an execution graph. The graph (protocol) contains steps (read,
-write) as nodes and flow as graph edges.
+write) as nodes and flow as graph edges. Helps to implement a sequence diagram. 
 
 Library API provides a way to define the protocol, read and write steps with configuration and variables to be used and
 read or written, driven by flow rules. And then run the protocol.
