@@ -133,6 +133,15 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.21.0</version>
             </plugin>
@@ -196,7 +205,11 @@
         <url>https://github.com/setmy-info/java-low-io/issues</url>
     </issueManagement>
 
-    <ciManagement/>
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/setmy-info/java-low-io/actions</url>
+    </ciManagement>
+
     <contributors/>
 
     <distributionManagement>
