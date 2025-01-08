@@ -1,16 +1,17 @@
 # java-low-io
 
-Network protocol build framework.
+Network protocol build & setup library for custom, non-standard, proprietary, domain- and vendor-specific protocol
+implementation.
 
 ## Idea
 
-A library that helps build client-server protocols as an execution graph. The graph (protocol) contains steps (read,
-write) as nodes and flow as graph edges. Helps to implement a sequence diagram. 
+A library that helps to build client-server protocols as an execution graph. The graph (protocol) contains steps (read,
+write) as nodes and flow as graph edges.
 
-Library API provides a way to define the protocol, read and write steps with configuration and variables to be used and
-read or written, driven by flow rules. And then run the protocol.
+Library API provides a way to define the protocol, read and write steps with their configuration and variables,
+driven by execution flow/path rules. And start the protocol.
 
-Prepared protocol definitions can be in separate library(ies).
+Prepared (defined) protocol can be in separate library(ies), depending on current library.
 
 ## Glossary
 
@@ -35,9 +36,9 @@ Prepared protocol definitions can be in separate library(ies).
 
 ### MVP
 
-A demo MVP can be as:
+Simplest demo MVP can be as:
 
-* Java
+* Java (17 ?)
 * TCP only
 * Not fully implemented
 * Not high-performing
