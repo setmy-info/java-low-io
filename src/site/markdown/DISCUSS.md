@@ -36,7 +36,7 @@ vendor-specific protocols, reducing development time and ensuring consistency ac
 The proposed library simplifies the development of custom client-server communication protocols by representing them as
 execution graphs. In this model:
 
-* Nodes in the graph represent protocol steps, such as reading or writing data.
+* Nodes in the graph represent protocol steps, such as reading or writing data (receive and send).
 * Edges define the flow of execution between steps, governed by configurable rules and conditions.
 
 The library's API enables developers to:
