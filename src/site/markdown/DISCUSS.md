@@ -4,8 +4,8 @@ Subject:
 
 Dear Apache Incubator Community,
 
-I hope this message finds you well. I would like to start a discussion regarding an idea for a new Java library, which
-aims to simplify programmatically build/setup (network) protocol.
+I would like to start a discussion regarding an idea for a new Java library, which
+aims to simplify programmatically build/setup (network, device communication, like serial port or other) protocol.
 
 Network protocol build & setup library for custom, non-standard, proprietary, domain- and vendor-specific protocol
 implementation.
@@ -58,7 +58,7 @@ communication requirements and promotes easier maintenance and scalability.
 I would greatly appreciate your feedback:
 
 - Does this project align with ASF's ecosystem and goals?
-- Would anyone be interested in collaborating
+- Would anyone be interested in collaborating?
 - Would anyone be interested in mentoring?
 
 Thank you for your time, and I look forward to your thoughts!
