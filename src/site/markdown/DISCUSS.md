@@ -10,7 +10,7 @@ aims to simplify programmatically build/setup (network, device communication, li
 Network protocol build & setup library for custom, non-standard, proprietary, domain- and vendor-specific protocol
 implementation.
 
-### Background
+# Background
 
 In many networked environments, developers frequently encounter situations where communication protocols between devices
 and servers are not based on widely adopted standards like HTTP or FTP. Instead, these interactions rely on
@@ -31,7 +31,7 @@ While these custom protocols enable specialized functionality, they can also int
 This project aims to address these issues by providing a modular, reusable library that simplifies working with such
 vendor-specific protocols, reducing development time and ensuring consistency across implementations.
 
-### Proposed Solution
+# Proposed Solution
 
 The proposed library simplifies the development of custom client-server communication protocols by representing them as
 execution graphs. In this model:
@@ -53,7 +53,7 @@ across projects.
 By abstracting protocol logic into an execution graph, the library minimizes the complexity of handling vendor-specific
 communication requirements and promotes easier maintenance and scalability.
 
-### Feedback Request
+# Feedback Request
 
 I would greatly appreciate your feedback:
 
