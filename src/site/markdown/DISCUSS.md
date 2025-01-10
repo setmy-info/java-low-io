@@ -4,13 +4,14 @@ Subject:
 
 Dear Apache Incubator Community,
 
-I would like to start a discussion regarding an idea for a new Java library, which
-aims to simplify programmatically build/setup (network, device communication, like serial port or other) protocol.
+I would like to start a discussion about an idea for a new Java library, designed to simplify the development and setup
+of custom communication protocols, particularly for networked environments and device interactions (e.g., serial ports,
+proprietary network protocols).
 
 Network protocol build & setup library for custom, non-standard, proprietary, domain- and vendor-specific protocol
 implementation.
 
-# Background
+# Background : The Need for Simplified Protocol Development
 
 In many networked environments, developers frequently encounter situations where communication protocols between devices
 and servers are not based on widely adopted standards like HTTP or FTP. Instead, these interactions rely on
@@ -31,7 +32,7 @@ While these custom protocols enable specialized functionality, they can also int
 This project aims to address these issues by providing a modular, reusable library that simplifies working with such
 vendor-specific protocols, reducing development time and ensuring consistency across implementations.
 
-# Proposed Solution
+# Proposed Solution: A Graph-Based Approach to Protocols
 
 The proposed library simplifies the development of custom client-server communication protocols by representing them as
 execution graphs. In this model:
@@ -53,6 +54,15 @@ across projects.
 By abstracting protocol logic into an execution graph, the library minimizes the complexity of handling vendor-specific
 communication requirements and promotes easier maintenance and scalability.
 
+The MVP will focus exclusively on the Java implementation to validate the concept and gather community feedback before
+considering broader adoption or porting to other languages like C++ or Python.
+
+# Summary
+
+To summarize, this project aims to simplify the implementation of non-standard protocols by providing a graph-based
+framework that enables reusable, modular, and maintainable solutions. The focus will initially be on Java, with
+potential for future expansion based on community input.
+
 # Feedback Request
 
 I would greatly appreciate your feedback:
@@ -60,6 +70,9 @@ I would greatly appreciate your feedback:
 - Does this project align with ASF's ecosystem and goals?
 - Would anyone be interested in collaborating?
 - Would anyone be interested in mentoring?
+
+If this aligns with your interests or expertise, please share your thoughts, questions, or suggestions. Your feedback is
+invaluable to shaping the direction of this project!
 
 Thank you for your time, and I look forward to your thoughts!
 
