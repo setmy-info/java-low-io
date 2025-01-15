@@ -45,6 +45,6 @@ Simplest demo MVP can be as:
 * Not thread-safe (single thread demo)
 * Client and server
 * Binary send and receive
-* No compression
-* No encryption
-* No authentication
+* No compression (probably not part of the low level library)
+* No encryption (probably not part of the low level library)
+* No authentication (probably not part of the low level library)
