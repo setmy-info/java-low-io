@@ -4,30 +4,48 @@ Subject:
 
 Dear Apache Incubator Community,
 
-I would like to start a discussion about an idea for a new Java library, designed to simplify the development and setup
-of custom communication protocols, particularly for networked environments and device interactions (e.g., serial ports,
-proprietary network protocols).
+I would like to start a discussion about an idea to stat development of new Java library, designed to simplify the
+development and setup of custom communication protocols, particularly for networked environments and device
+interactions (e.g., serial ports, proprietary network protocols).
 
-Network protocol build & setup library for custom, non-standard, proprietary, domain- and vendor-specific protocol
-implementation.
+A library for building and setting up I/O protocols, tailored for custom, non-standard, proprietary, domain-, and
+vendor-specific protocol implementations.
 
-# Background : The Need for Simplified Protocol Development
+# Background: Why is this Needed?
 
-In many networked environments, developers frequently encounter situations where communication protocols between devices
-and servers are not based on widely adopted standards like HTTP or FTP. Instead, these interactions rely on
-custom, non-standard, proprietary, domain- and vendor-specific protocols that are unique to particular hardware or
-(network) systems.
+In many projects, developers must work with proprietary or vendor-specific communication I/O protocols, which are not
+based on wel used and supported implementations like HTTP (REST, GraphQL, etc. top on that).
+
+For example:
+
+* Integrating with legacy serial port devices in industrial systems.
+* Implementing vendor-specific communication for IoT gateways or edge devices.
+* Interacting with specialized network or hardware devices in telecommunications or data centers.
+* Developing custom communication protocols for specific use cases.
 
 Such protocols often require developers to implement custom solutions from scratch, following detailed technical
 documentation or specifications provided by the vendor. This scenario is particularly common in domains like industrial
-automation, IoT (Internet of Things), and telecommunications, where devices or network services are designed with
-bespoke communication protocols tailored to specific use cases.
+automation, IoT, and telecommunications, where devices or network services are designed with bespoke communication
+protocols tailored to specific use cases.
 
-While these custom protocols enable specialized functionality, they can also introduce challenges:
+TODO : milles probleem täpsemalt seisneb?
+TODO : protokolli on suht keerukas implementeerida. Teek oleks selleks et lihtsustada protokollide implementeerimists.
 
+See rida ära jätta ja lihtsama lausega: While these custom protocols enable specialized functionality, they can also
+introduce challenges:
+
+* Mahukas ja keerukas protokolli dokumentatsioon, mida vaja implementeerida programmselt.
+* Keerukas jägligida ja kontrollida protokolli implementatsiooni korrektsust.
+* sama funktsionaalsuse taas implementeerikimine uute protokollide implementeerimisel - kogu IO ja andmestrutktuur
+  uuesti luua ja just selle ülesande (protokolli) jaoks
+* Tihti IO protokollide implementatsioonid on tugevalt seotud protokolli andmestruktuuridega ning kindla ülesande
+  saavutamisega ja pole võimalik taas kasutada mõne uue protokolli loomiseks.
 * Repeated effort in implementing similar protocol features across projects.
-* Lack of interoperability with standard tools and libraries.
-* Increased maintenance overhead due to non-standardized behavior.
+* Limited reuse of protocol implementations across projects or teams.
+* Complex logic for handling protocol steps, data transformations, and error handling.
+* Difficulty in maintaining and updating protocol implementations as requirements evolve.
+* Lack of standardized tools or libraries for working with vendor-specific protocols.
+* Difficult to put dogether programmatically
 
 This project aims to address these issues by providing a modular, reusable library that simplifies working with such
 vendor-specific protocols, reducing development time and ensuring consistency across implementations.
