@@ -10,7 +10,7 @@ interactions (e.g., serial ports, proprietary network protocols).
 
 A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,
 proprietary, domain-, and vendor-specific protocol implementations, while remaining loosely coupled from the data
-structures being transferred (at least built and set up separately with same library).
+structures being transferred.
 
 ## Background: Why is this Needed?
 
@@ -21,7 +21,7 @@ themselves.
 
 ### Examples of such use cases:
 
-* Integrating with legacy serial port devices in industrial systems.
+* Integrating with (legacy) serial port devices in industrial systems.
 * Implementing vendor-specific communication for IoT gateways or edge devices.
 * Interacting with specialized network or hardware devices in telecommunications or data centers.
 * Developing custom communication protocols for specific use cases.
@@ -37,7 +37,7 @@ specification, the greater the struggle with implementation. It is also quite di
 done later on. Additionally, there is little reusable code, and identifying parts of the code that can be reused is also
 difficult.
 
-This project aims to address these issues by providing a modular, reusable library that simplifies working with such
+This project aims to address these issues by providing a reusable library that simplifies working with such
 vendor-specific protocols, reducing development time and ensuring consistency across implementations.
 
 # Proposed Solution: A Graph-Based Approach to Protocols
