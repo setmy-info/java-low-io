@@ -1,33 +1,38 @@
 Subject:
 
-[DISCUSS] Proposal to Start Development of a New Java Library in Apache Incubator
+# [DISCUSS] Proposal to Start Development of a New Java Library in Apache Incubator
 
 Dear Apache Incubator Community,
 
-I would like to start a discussion about an idea to stat development of new Java library, designed to simplify the
-development and setup of custom communication protocols, particularly for networked environments and device
+I would like to start a discussion about an idea to start the development of a new Java library, designed to simplify  
+the implementation and setup of custom communication protocols, particularly for networked environments and device  
 interactions (e.g., serial ports, proprietary network protocols).
 
-A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,
-proprietary, domain-, and vendor-specific protocol implementations with loosely coupled from data structures.
+A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,  
+proprietary, domain-, and vendor-specific protocol implementations while being loosely coupled from data structures to
+transfer.
 
-# Background: Why is this Needed?
+## Background: Why is this Needed?
 
-In many projects, developers must work with proprietary or vendor-specific communication I/O protocols, which are not
-based on wel used and supported implementations like HTTP (REST, GraphQL, etc. top on that). Mostly these specific
-protocols are tightly copuled with data structures those should be carried over protocol.
+In many projects, developers must work with proprietary or vendor-specific communication I/O protocols that are not  
+based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.). These specific protocols are  
+often tightly coupled with the data structures they transfer.
 
-For example:
+### Examples of such use cases:
 
 * Integrating with legacy serial port devices in industrial systems.
 * Implementing vendor-specific communication for IoT gateways or edge devices.
 * Interacting with specialized network or hardware devices in telecommunications or data centers.
 * Developing custom communication protocols for specific use cases.
 
-Such protocols often require developers to implement custom solutions from scratch, following detailed technical
-documentation or specifications provided by the vendor. Specification describe also data structures to transfer.
-This scenario is particularly common in domains like industrial automation, IoT, and telecommunications, where devices
-or network services are designed with bespoke communication protocols tailored to specific use cases.
+Such protocols often require developers to implement custom solutions from scratch, following detailed technical  
+documentation or specifications provided by the vendor. These specifications typically define not only the protocol  
+behavior but also the data structures being transferred.
+
+This situation is particularly common in domains such as industrial automation, IoT, and telecommunications, where  
+devices or network services operate with bespoke communication protocols tailored to specific use cases.
+
+# ----------------------
 
 TODO : milles probleem täpsemalt seisneb?
 TODO : protokolli on suht keerukas implementeerida. Teek oleks selleks et lihtsustada protokollide implementeerimists.
@@ -83,6 +88,8 @@ framework that enables reusable, modular, and maintainable solutions. The focus 
 potential for future expansion based on community input.
 
 Initial base structure, skeleton and PoC can be done by me and my team.
+
+# ----------------------
 
 # Feedback Request
 
