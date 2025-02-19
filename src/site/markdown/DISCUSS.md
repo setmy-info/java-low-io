@@ -16,7 +16,8 @@ structures being transferred (at least built and set up separately with same lib
 
 In many projects, developers must work with proprietary or vendor-specific communication I/O protocols that are not  
 based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.). These specific protocols are  
-often tightly coupled with the data structures they transfer.
+often tightly coupled with the data structures they transfer. And the protocol needs to be implemented by developers
+themselves.
 
 ### Examples of such use cases:
 
