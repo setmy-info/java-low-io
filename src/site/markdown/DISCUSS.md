@@ -14,8 +14,8 @@ structures being transferred (at least built and set up separately with same lib
 
 ## Background: Why is this Needed?
 
-In many projects, developers must work with proprietary or vendor-specific communication I/O protocols that are not  
-based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.). These specific protocols are  
+In many projects, developers must work with proprietary or vendor-specific communication I/O protocols that are not
+based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.). These specific protocols are
 often tightly coupled with the data structures they transfer. And the protocol needs to be implemented by developers
 themselves.
 
@@ -27,62 +27,44 @@ themselves.
 * Developing custom communication protocols for specific use cases.
 
 Such protocols often require developers to implement custom solutions from scratch, following detailed technical  
-documentation or specifications provided by the vendor. These specifications typically define not only the protocol  
-behavior but also the data structures being transferred.
+documentation or specifications provided by the vendor.
 
 This situation is particularly common in domains such as industrial automation, IoT, and telecommunications, where  
 devices or network services operate with bespoke communication protocols tailored to specific use cases.
 
-# ----------------------
-
-TODO : milles probleem täpsemalt seisneb?
-TODO : protokolli on suht keerukas implementeerida. Teek oleks selleks et lihtsustada protokollide implementeerimists.
-
-See rida ära jätta ja lihtsama lausega: While these custom protocols enable specialized functionality, they can also
-introduce challenges:
-
-* Mahukas ja keerukas protokolli dokumentatsioon, mida vaja implementeerida programmselt.
-* Keerukas jägligida ja kontrollida protokolli implementatsiooni korrektsust.
-* sama funktsionaalsuse taas implementeerikimine uute protokollide implementeerimisel - kogu IO ja andmestrutktuur
-  uuesti luua ja just selle ülesande (protokolli) jaoks
-* Tihti IO protokollide implementatsioonid on tugevalt seotud protokolli andmestruktuuridega ning kindla ülesande
-  saavutamisega ja pole võimalik taas kasutada mõne uue protokolli loomiseks.
-* Repeated effort in implementing similar protocol features across projects.
-* Limited reuse of protocol implementations across projects or teams.
-* Complex logic for handling protocol steps, data transformations, and error handling.
-* Difficulty in maintaining and updating protocol implementations as requirements evolve.
-* Lack of standardized tools or libraries for working with vendor-specific protocols.
-* Difficult to put dogether programmatically
+The problem is that doing it yourself is labor-intensive, requires precision, and is tedious work. The larger the
+specification, the greater the struggle with implementation. It is also quite difficult to recall and follow what was
+done later on. Additionally, there is little reusable code, and identifying parts of the code that can be reused is also
+difficult.
 
 This project aims to address these issues by providing a modular, reusable library that simplifies working with such
 vendor-specific protocols, reducing development time and ensuring consistency across implementations.
 
 # Proposed Solution: A Graph-Based Approach to Protocols
 
-The proposed library simplifies the development of custom client-server communication protocols by representing them as
-execution graphs. In this model:
+The proposed library simplifies the development of custom client-server (sender-receiver and vice versa) communication
+protocols by representing them as execution graphs.
+
+In this model:
 
 * Nodes in the graph represent protocol steps, such as reading or writing data (receive and send).
 * Edges define the flow of execution between steps, governed by configurable rules and conditions.
 
-The library's API enables developers to:
+The library provides functionality to build and execute graphs, handle basic I/O operations (and potentially more),
+construct data structures for transfer, bind structure definitions to steps (or with the whole defined graph), handle
+events, and manage a callback system.
 
-* Define Protocols: Create reusable protocol definitions using modular steps with configurations and variables.
-* Configure Execution Flows: Specify the logic and transitions between steps, allowing complex protocols to be expressed
-  in an intuitive manner.
-* Execute Protocols: Start and manage protocol flows seamlessly.
-
-Additionally, predefined protocols can be packaged as separate libraries, making them reusable and composable for
-specific use cases. This modularity reduces repetitive implementation effort while ensuring consistency and reliability
-across projects.
+**I assume that a graph, even when implemented in (fluent) code, is more readable than a fully custom implementation.**
 
 By abstracting protocol logic into an execution graph, the library minimizes the complexity of handling vendor-specific
-communication requirements and promotes easier maintenance and scalability.
+communication requirements and promotes easier maintenance.
 
-The MVP will focus exclusively on the Java implementation to validate the concept and gather community feedback before
-considering broader adoption or porting to other languages like C++ or Python.
+The MVP implementation of the library will focus exclusively on Java to validate the concept and gather community
+feedback before considering broader adoption or porting to other languages like C++ or Python.
 
 # Summary
+
+# ----------------------
 
 To summarize, this project aims to simplify the implementation of non-standard protocols by providing a graph-based
 framework that enables reusable, modular, and maintainable solutions. The focus will initially be on Java, with
