@@ -1,6 +1,6 @@
 Subject:
 
-[DISCUSS] Proposal for a New Java Library in Apache Incubator
+[DISCUSS] Proposal to Start Development of a New Java Library in Apache Incubator
 
 Dear Apache Incubator Community,
 
@@ -8,13 +8,14 @@ I would like to start a discussion about an idea to stat development of new Java
 development and setup of custom communication protocols, particularly for networked environments and device
 interactions (e.g., serial ports, proprietary network protocols).
 
-A library for building and setting up I/O protocols, tailored for custom, non-standard, proprietary, domain-, and
-vendor-specific protocol implementations.
+A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,
+proprietary, domain-, and vendor-specific protocol implementations with loosely coupled from data structures.
 
 # Background: Why is this Needed?
 
 In many projects, developers must work with proprietary or vendor-specific communication I/O protocols, which are not
-based on wel used and supported implementations like HTTP (REST, GraphQL, etc. top on that).
+based on wel used and supported implementations like HTTP (REST, GraphQL, etc. top on that). Mostly these specific
+protocols are tightly copuled with data structures those should be carried over protocol.
 
 For example:
 
@@ -24,9 +25,9 @@ For example:
 * Developing custom communication protocols for specific use cases.
 
 Such protocols often require developers to implement custom solutions from scratch, following detailed technical
-documentation or specifications provided by the vendor. This scenario is particularly common in domains like industrial
-automation, IoT, and telecommunications, where devices or network services are designed with bespoke communication
-protocols tailored to specific use cases.
+documentation or specifications provided by the vendor. Specification describe also data structures to transfer.
+This scenario is particularly common in domains like industrial automation, IoT, and telecommunications, where devices
+or network services are designed with bespoke communication protocols tailored to specific use cases.
 
 TODO : milles probleem täpsemalt seisneb?
 TODO : protokolli on suht keerukas implementeerida. Teek oleks selleks et lihtsustada protokollide implementeerimists.
@@ -80,6 +81,8 @@ considering broader adoption or porting to other languages like C++ or Python.
 To summarize, this project aims to simplify the implementation of non-standard protocols by providing a graph-based
 framework that enables reusable, modular, and maintainable solutions. The focus will initially be on Java, with
 potential for future expansion based on community input.
+
+Initial base structure, skeleton and PoC can be done by me and my team.
 
 # Feedback Request
 
