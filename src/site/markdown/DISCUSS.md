@@ -67,10 +67,12 @@ feedback before considering broader adoption or porting to other languages like 
 # ----------------------
 
 To summarize, this project aims to simplify the implementation of non-standard protocols by providing a graph-based
-framework that enables reusable, modular, and maintainable solutions. The focus will initially be on Java, with
-potential for future expansion based on community input.
+framework that can handle basic I/O operations on its own through a defined graph. Most of the basic I/O functions are
+handled within the library, compared to a custom-made solution where everrithing is corossused and tightly coupled.
 
-Initial base structure, skeleton and PoC can be done by me and my team.
+The initial focus will be on Java, with the potential for future expansion based on community input.
+
+The initial base structure, skeleton, and proof of concept (PoC) can be developed by me and my team.
 
 # ----------------------
 
