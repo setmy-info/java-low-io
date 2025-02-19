@@ -8,9 +8,9 @@ I would like to start a discussion about an idea to start the development of a n
 the implementation and setup of custom communication protocols, particularly for networked environments and device  
 interactions (e.g., serial ports, proprietary network protocols).
 
-A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,  
-proprietary, domain-, and vendor-specific protocol implementations while being loosely coupled from data structures to
-transfer.
+A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,
+proprietary, domain-, and vendor-specific protocol implementations, while remaining loosely coupled from the data
+structures being transferred (at least built and set up separately).
 
 ## Background: Why is this Needed?
 
@@ -93,7 +93,7 @@ Initial base structure, skeleton and PoC can be done by me and my team.
 
 # Feedback Request
 
-I would greatly appreciate your feedback:
+The idea is still quite abstract, but I would greatly appreciate your feedback:
 
 - Does this project align with ASF's ecosystem and goals?
 - Would anyone be interested in collaborating?
