@@ -10,7 +10,7 @@ interactions (e.g., serial ports, proprietary network protocols).
 
 A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,
 proprietary, domain-, and vendor-specific protocol implementations, while remaining loosely coupled from the data
-structures being transferred (at least built and set up separately).
+structures being transferred (at least built and set up separately with same library).
 
 ## Background: Why is this Needed?
 
