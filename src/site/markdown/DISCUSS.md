@@ -79,8 +79,9 @@ Apache Incubator.
 The idea is still quite abstract, but I would greatly appreciate your feedback:
 
 - Does this project align with ASF's ecosystem and goals?
-- Would anyone be interested in collaborating?
+- Would anyone be interested in collaborating, contributing or providing feedback during development?
 - Would anyone be interested in mentoring?
+- Are there existing projects or initiatives that we should consider or align with?
 
 If this aligns with your interests or expertise, please share your thoughts, questions, or suggestions. Your feedback is
 invaluable to shaping the direction of this project!
