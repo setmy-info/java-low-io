@@ -71,8 +71,8 @@ handled within the library, compared to a custom-made solution where everything 
 The initial focus will be on Java, with the potential for future expansion based on community input.
 
 The initial base structure, skeleton, and proof of concept (PoC) will be independently developed by me and my team as a
-preliminary effort in our own repository, serving as an example to further develop and eventually migrate to the
-necessary repositories.
+preliminary effort in our own repository, serving as an example for further development and eventual transition into the
+Apache Incubator.
 
 # Feedback Request
 
