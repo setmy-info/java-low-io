@@ -8,16 +8,15 @@ I would like to start a discussion about an idea to start the development of a n
 the implementation and setup of custom communication protocols, particularly for networked environments and device  
 interactions (e.g., serial ports, proprietary network protocols).
 
-A library for building and setting up I/O (read/write, send/receive) protocols, tailored for custom, non-standard,
+A library for building and setting up I/O (read/write, send/receive) protocols. Custom, non-standard,
 proprietary, domain-, and vendor-specific protocol implementations, while remaining loosely coupled from the data
 structures being transferred.
 
 ## Background: Why is this Needed?
 
 In many projects, developers must work with proprietary or vendor-specific communication I/O protocols that are not
-based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.). These specific protocols are
-often tightly coupled with the data structures they transfer. And the protocol needs to be implemented by developers
-themselves.
+based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.) for which libraries already
+exist. And the protocol needs to be implemented by developers themselves.
 
 ### Use cases
 
@@ -26,7 +25,7 @@ themselves.
 * Interacting with specialized network or hardware devices in telecommunications or data centers.
 * Developing custom communication protocols for specific use cases.
 
-These protocols often require developers to implement custom solutions from scratch, following detailed technical  
+Such protocols often require developers to implement custom solutions from scratch, following detailed technical  
 documentation or specifications provided by the vendor.
 
 This situation is particularly common in domains like industrial automation, IoT, and telecommunications, where  
@@ -47,7 +46,7 @@ protocols by representing them as execution graphs.
 
 In this model:
 
-* Nodes in the graph represent protocol steps - reading or writing data (receive and send).
+* Nodes in the graph represent protocol steps - reading or writing data (receive or send).
 * Edges define the flow of execution between steps, governed by configurable rules and conditions.
 
 The library provides functionality to build and execute graphs, handle basic I/O operations (and potentially more),
