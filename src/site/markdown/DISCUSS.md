@@ -19,17 +19,17 @@ based on well-known and widely supported implementations like HTTP (REST, GraphQ
 often tightly coupled with the data structures they transfer. And the protocol needs to be implemented by developers
 themselves.
 
-### Examples of such use cases:
+### Use cases
 
 * Integrating with (legacy) serial port devices in industrial systems.
 * Implementing vendor-specific communication for IoT gateways or edge devices.
 * Interacting with specialized network or hardware devices in telecommunications or data centers.
 * Developing custom communication protocols for specific use cases.
 
-Such protocols often require developers to implement custom solutions from scratch, following detailed technical  
+These protocols often require developers to implement custom solutions from scratch, following detailed technical  
 documentation or specifications provided by the vendor.
 
-This situation is particularly common in domains such as industrial automation, IoT, and telecommunications, where  
+This situation is particularly common in domains like industrial automation, IoT, and telecommunications, where  
 devices or network services operate with bespoke communication protocols tailored to specific use cases.
 
 The problem is that doing it yourself is labor-intensive, requires precision, and is tedious work. The larger the
@@ -47,7 +47,7 @@ protocols by representing them as execution graphs.
 
 In this model:
 
-* Nodes in the graph represent protocol steps, such as reading or writing data (receive and send).
+* Nodes in the graph represent protocol steps - reading or writing data (receive and send).
 * Edges define the flow of execution between steps, governed by configurable rules and conditions.
 
 The library provides functionality to build and execute graphs, handle basic I/O operations (and potentially more),
