@@ -1,4 +1,24 @@
-Email: general@incubator.apache.org
+# Email
+
+[general@incubator.apache.org](mailto:general@incubator.apache.org)
+
+# Options for subject
+
+| **Tag**        | **Explanation**                                                                                                                    |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------|
+| **[ANNOUNCE]** | Used for official announcements, such as new releases, major updates, or important organizational news.                            |
+| **[CANCEL]**   | Used to inform about the cancellation of an event, vote, or planned discussion.                                                    |
+| **[VOTE]**     | Used when calling for a vote on a decision or proposal.                                                                            |
+| **[RESULT]**   | Used to share the outcome of a vote, discussion, or decision-making process.                                                       |
+| **[DISCUSS]**  | Used to initiate an open discussion on a topic, seeking input from the community.                                                  |
+| **[NOTICE]**   | Used for important notifications, such as policy changes, upcoming deadlines, or required actions.                                 |
+| **[QUESTION]** | Used when asking the community for clarification or seeking answers on a specific topic.                                           |
+| **[LEGAL]**    | Used for legal-related discussions, such as licensing issues, trademarks, or compliance.                                           |
+| **[PROPOSAL]** | Used when formally presenting a new idea or project for consideration.                                                             |
+| **[REQUEST]**  | Used when asking for resources, support, or contributions from the community.                                                      |
+| **[HELP]**     | Used when seeking technical assistance or guidance on an issue.                                                                    |
+| **[RFC]**      | Request for Comments - Used when seeking early-stage feedback on an idea, draft, or specification before making a formal proposal. |
+| **[FYI]**      | Used when sharing information that does not require discussion or immediate action.                                                |
 
 Subject:
 
