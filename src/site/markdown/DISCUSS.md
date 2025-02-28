@@ -1,3 +1,5 @@
+Email: general@incubator.apache.org
+
 Subject:
 
 # [DISCUSS] Proposal to Start Development of a New Java Library in Apache Incubator
