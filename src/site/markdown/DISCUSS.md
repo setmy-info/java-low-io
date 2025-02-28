@@ -2,6 +2,10 @@
 
 [general@incubator.apache.org](mailto:general@incubator.apache.org)
 
+# Web interface
+
+[General mail list](https://lists.apache.org/list.html?general@incubator.apache.org)
+
 # Options for subject
 
 | **Tag**        | **Explanation**                                                                                                                    |
