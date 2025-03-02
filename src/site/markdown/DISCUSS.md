@@ -54,9 +54,6 @@ exist. And the protocol needs to be implemented by developers themselves.
 Such protocols often require developers to implement custom solutions from scratch, following detailed technical  
 documentation or specifications provided by the vendor.
 
-This situation is particularly common in domains like industrial automation, IoT, and telecommunications, where  
-devices or network services operate with specific communication protocols created for specific use cases.
-
 The problem is that doing it yourself is labor-intensive, requires precision, and is tedious work. The larger the
 specification, the greater the struggle with implementation. It is also quite difficult to recall and follow what was
 done later on. Additionally, there is little reusable code, and identifying parts of the code that can be reused is also
