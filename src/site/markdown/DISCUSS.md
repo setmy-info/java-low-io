@@ -23,6 +23,7 @@
 | **[HELP]**     | Used when seeking technical assistance or guidance on an issue.                                                                    |
 | **[RFC]**      | Request for Comments - Used when seeking early-stage feedback on an idea, draft, or specification before making a formal proposal. |
 | **[FYI]**      | Used when sharing information that does not require discussion or immediate action.                                                |
+| **[MENTORS]**  | xxx.                                                                                                                               |
 
 Subject:
 
