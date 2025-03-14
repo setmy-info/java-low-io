@@ -38,23 +38,23 @@ interactions (e.g., serial ports, proprietary network protocols).
 
 A library for building and setting up I/O (read/write, send/receive) protocols. Custom, non-standard,
 proprietary, domain-, and vendor-specific protocol implementations, while remaining loosely coupled from the data
-structures being transferred.
+structures (message data structures) being transferred.
 
 ## Background: Why is this Needed?
 
 In many projects, developers must work with proprietary or vendor-specific communication I/O protocols that are not
-based on well-known and widely supported implementations like HTTP (REST, GraphQL, etc.) for which libraries already
-exist. And the protocol needs to be implemented by developers themselves.
+based on widely supported implementations like HTTP (REST, GraphQL, etc.) for which libraries exist. And the protocol
+needs to be implemented by developers themselves. Shortly: no libraries to take.
 
 ### Use cases
 
 * Integrating with (legacy) serial port devices in industrial systems.
 * Implementing vendor-specific communication for IoT gateways or edge devices.
 * Interacting with specialized network or hardware devices in telecommunications or data centers.
-* Developing custom communication protocols for specific use cases.
+* Developing custom communication protocols for specific use cases, between devices and systems.
 
 Such protocols often require developers to implement custom solutions from scratch, following detailed technical  
-documentation or specifications provided by the vendor.
+documentation or specifications provided by the (protocol) vendor.
 
 The problem is that doing it yourself is labor-intensive, requires precision, and is tedious work. The larger the
 specification, the greater the struggle with implementation. It is also quite difficult to recall and follow what was
@@ -75,16 +75,17 @@ In this model:
 * Edges define the flow of execution between steps, governed by configurable rules and conditions.
 
 The library provides functionality to build and execute graphs, handle basic I/O operations (and potentially more),
-construct data structures for transfer, bind structure definitions to steps (or with the whole defined graph), handle
-events, and manage a callback system.
+bind data structures to steps (or with the whole defined graph) to carry over protocol, handle events, and manage a
+callback system.
 
-**I assume that a graph, even when implemented in (fluent) code, is more readable than a fully custom implementation.**
+**I assume that a graph, even when implemented in (fluent) code, is more readable (repairable/improvable) than a fully
+custom implementation.**
 
 By abstracting protocol logic into an execution graph, the library minimizes the complexity of handling vendor-specific
 communication requirements and promotes easier maintenance.
 
 The MVP implementation of the library will focus exclusively on Java to validate the concept and gather community
-feedback before considering broader adoption or porting to other languages like C++ or Python.
+feedback before considering broader adoption or porting to other languages like C++ or other.
 
 # Summary
 
@@ -104,6 +105,7 @@ The idea is still quite abstract, but I would greatly appreciate your feedback:
 
 - Do you see value in such a project?
 - Does this project align with ASF's ecosystem and goals?
+- Is it potential AFS software?
 - Are there existing projects or initiatives that we should consider or learn from?
 
 Looking ahead:
@@ -111,10 +113,9 @@ Looking ahead:
 - Would anyone be interested in collaborating, contributing or providing feedback during development?
 - Would anyone be interested in mentoring?
 
-If this aligns with your interests or expertise, please share your thoughts, questions, or suggestions. Your feedback is
-invaluable to shaping the direction of this project!
+If this aligns with your interests or expertise, please share your thoughts, questions, or suggestions.
 
-Thank you for your time, and I look forward to your thoughts!
+Thank you!
 
 Best regards,  
 Imre Tabur
