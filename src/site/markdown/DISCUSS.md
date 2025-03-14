@@ -105,7 +105,7 @@ The idea is still quite abstract, but I would greatly appreciate your feedback:
 
 - Do you see value in such a project?
 - Does this project align with ASF's ecosystem and goals?
-- Is it potential AFS software?
+- Is it potential ASF software?
 - Are there existing projects or initiatives that we should consider or learn from?
 
 Looking ahead:
