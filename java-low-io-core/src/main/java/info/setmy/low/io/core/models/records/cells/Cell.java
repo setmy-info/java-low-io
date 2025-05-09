@@ -8,4 +8,6 @@ import lombok.RequiredArgsConstructor;
 public abstract class Cell<T> {
 
     private final T value;
+
+    public abstract int size();
 }

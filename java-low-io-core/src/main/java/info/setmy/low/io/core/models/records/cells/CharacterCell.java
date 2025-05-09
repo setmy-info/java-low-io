@@ -1,8 +1,8 @@
 package info.setmy.low.io.core.models.records.cells;
 
-public class ShortCell extends Cell<Short> {
+public class CharacterCell extends Cell<Character> {
 
-    protected ShortCell(final Short value) {
+    protected CharacterCell(final Character value) {
         super(value);
     }
 

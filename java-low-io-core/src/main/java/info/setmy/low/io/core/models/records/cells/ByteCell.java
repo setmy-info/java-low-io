@@ -1,13 +1,13 @@
 package info.setmy.low.io.core.models.records.cells;
 
-public class ShortCell extends Cell<Short> {
+public class ByteCell extends Cell<Byte> {
 
-    protected ShortCell(final Short value) {
+    protected ByteCell(final Byte value) {
         super(value);
     }
 
     @Override
     public int size() {
-        return 2;
+        return 1;
     }
 }
