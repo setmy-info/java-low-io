@@ -2,7 +2,7 @@ package info.setmy.low.io.core.models.records.cells;
 
 public class IntegerCell extends Cell<Integer> {
 
-    protected IntegerCell(final Integer value) {
+    public IntegerCell(final Integer value) {
         super(value);
     }
 

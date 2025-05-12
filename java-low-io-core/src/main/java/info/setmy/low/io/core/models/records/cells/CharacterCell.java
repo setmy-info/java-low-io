@@ -2,7 +2,7 @@ package info.setmy.low.io.core.models.records.cells;
 
 public class CharacterCell extends Cell<Character> {
 
-    protected CharacterCell(final Character value) {
+    public CharacterCell(final Character value) {
         super(value);
     }
 
