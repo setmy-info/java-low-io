@@ -2,16 +2,14 @@ package info.setmy.low.io.core.io;
 
 import info.setmy.low.io.core.exception.LowIOException;
 import info.setmy.low.io.core.models.records.cells.Cell;
-import lombok.Builder;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-@Builder(toBuilder = true)
 public abstract class OrderedInputOutputStream<T> {
 
-    public abstract Cell<T> read(InputOutputStream ios);
+    public abstract void read(Cell<T> data, InputOutputStream ios);
 
     public abstract void write(Cell<T> data, InputOutputStream toInputOutputStream);
 

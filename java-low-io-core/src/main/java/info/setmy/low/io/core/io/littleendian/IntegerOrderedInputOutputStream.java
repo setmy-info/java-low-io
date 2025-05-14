@@ -3,7 +3,6 @@ package info.setmy.low.io.core.io.littleendian;
 import info.setmy.low.io.core.io.InputOutputStream;
 import info.setmy.low.io.core.io.OrderedInputOutputStream;
 import info.setmy.low.io.core.models.records.cells.Cell;
-import info.setmy.low.io.core.models.records.cells.IntegerCell;
 import lombok.NoArgsConstructor;
 
 import java.nio.ByteBuffer;
@@ -14,11 +13,11 @@ import static java.nio.ByteOrder.LITTLE_ENDIAN;
 @NoArgsConstructor
 public class IntegerOrderedInputOutputStream extends OrderedInputOutputStream<Integer> {
 
+    public static final IntegerOrderedInputOutputStream INSTANCE = new IntegerOrderedInputOutputStream();
+
     @Override
-    public Cell<Integer> read(InputOutputStream ios) {
-        return new IntegerCell(
-            wrap(read(new byte[4], ios.in())).order(LITTLE_ENDIAN).getInt()
-        );
+    public void read(Cell<Integer> data, InputOutputStream ios) {
+        data.setValue(wrap(read(new byte[4], ios.in())).order(LITTLE_ENDIAN).getInt());
     }
 
     @Override
