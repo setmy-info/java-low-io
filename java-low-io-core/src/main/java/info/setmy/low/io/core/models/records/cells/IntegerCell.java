@@ -8,6 +8,7 @@ import static info.setmy.low.io.core.io.SelectedInputOutputStream.LITTLE_ENDIAN;
 
 public class IntegerCell extends Cell<Integer> {
 
+    //TODO: by protocol endiannes allocation class/methods/lambdas?
     public static IntegerCell newBigEndianCell() {
         return new IntegerCell(BIG_ENDIAN.integerOrderedInputOutputStream());
     }

@@ -7,6 +7,7 @@ import static info.setmy.low.io.core.io.SelectedInputOutputStream.LITTLE_ENDIAN;
 
 public class ShortCell extends Cell<Short> {
 
+    //TODO: by protocol endiannes allocation class/methods/lambdas?
     public static ShortCell newBigEndianCell() {
         return new ShortCell(BIG_ENDIAN.shortOrderedInputOutputStream());
     }
