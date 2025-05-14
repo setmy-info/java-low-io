@@ -16,7 +16,7 @@ public class CharacterOrderedInputOutputStream extends OrderedInputOutputStream<
 
     @Override
     public void read(Cell<Character> data, InputOutputStream ios) {
-        data.setValue(wrap(read(new byte[2], ios.in())).getChar());
+        data.setValue(wrap(read(new byte[data.size()], ios.in())).getChar());
     }
 
     @Override

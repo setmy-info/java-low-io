@@ -17,7 +17,7 @@ public class IntegerOrderedInputOutputStream extends OrderedInputOutputStream<In
 
     @Override
     public void read(Cell<Integer> data, InputOutputStream ios) {
-        data.setValue(wrap(read(new byte[4], ios.in())).order(LITTLE_ENDIAN).getInt());
+        data.setValue(wrap(read(new byte[data.size()], ios.in())).order(LITTLE_ENDIAN).getInt());
     }
 
     @Override

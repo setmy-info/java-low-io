@@ -17,7 +17,7 @@ public class ShortOrderedInputOutputStream extends OrderedInputOutputStream<Shor
 
     @Override
     public void read(Cell<Short> data, InputOutputStream ios) {
-        data.setValue(wrap(read(new byte[2], ios.in())).order(LITTLE_ENDIAN).getShort());
+        data.setValue(wrap(read(new byte[data.size()], ios.in())).order(LITTLE_ENDIAN).getShort());
     }
 
     @Override

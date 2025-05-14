@@ -16,7 +16,7 @@ public class ByteOrderedInputOutputStream extends OrderedInputOutputStream<Byte>
 
     @Override
     public void read(Cell<Byte> data, InputOutputStream ios) {
-        data.setValue(wrap(read(new byte[1], ios.in())).get());
+        data.setValue(wrap(read(new byte[data.size()], ios.in())).get());
     }
 
     @Override
