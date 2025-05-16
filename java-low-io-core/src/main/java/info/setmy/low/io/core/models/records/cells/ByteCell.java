@@ -7,7 +7,7 @@ import static info.setmy.low.io.core.io.SelectedInputOutputStream.LITTLE_ENDIAN;
 
 public class ByteCell extends Cell<Byte> {
 
-    //TODO: by protocol endiannes allocation class/methods/lambdas?
+    //TODO: by protocol endianness allocation class/methods/lambdas?
     public static ByteCell newBigEndianCell() {
         return new ByteCell(BIG_ENDIAN.byteOrderedInputOutputStream());
     }
