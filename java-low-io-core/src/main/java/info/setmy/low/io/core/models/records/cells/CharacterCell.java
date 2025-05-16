@@ -8,7 +8,7 @@ import static info.setmy.low.io.core.io.SelectedInputOutputStream.LITTLE_ENDIAN;
 
 public class CharacterCell extends Cell<Character> {
 
-    //TODO: by protocol endiannes allocation class/methods/lambdas?
+    //TODO: by protocol endianness allocation class/methods/lambdas?
     public static CharacterCell newBigEndianCell() {
         return new CharacterCell(BIG_ENDIAN.characterOrderedInputOutputStream());
     }
